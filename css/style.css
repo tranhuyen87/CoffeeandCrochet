@@ -68,7 +68,7 @@ header {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   min-width: 230px;
 }
 .logo {
@@ -125,7 +125,7 @@ nav a:hover,
 }
 .brand-banner {
   width: 100%;
-  max-height: 350px;
+  max-height: 650px;
   overflow: hidden;
   background: #f3e5d2;
   border-top: 1px solid #e5d8c9;
@@ -134,9 +134,9 @@ nav a:hover,
 .brand-banner img {
   display: block;
   width: 100%;
-  height: clamp(180px, 28vw, 350px);
+  height: clamp(180px, 40vw, 650px);
   object-fit: cover;
-  object-position: center 48%;
+  object-position: center center;
 }
 .hero {
   max-width: 1180px;
@@ -198,10 +198,10 @@ h1 {
   transform: translateY(-2px);
   background: #5e3f31;
 }
-.btn.secondary {
+/* .btn.secondary {
   background: transparent;
   color: var(--site-primary);
-}
+} */
 .hero-art {
   min-height: 420px;
   position: relative;
@@ -562,9 +562,23 @@ footer {
     flex-basis: calc((100% - 18px) / 2);
   }
 }
-@media (max-width: 680px) {
+.sp {
+  display: none!important;
+}
+@media (max-width: 768px) {
+  .pc {
+    display: none!important;
+  }
+  .sp {
+    display: block!important;
+  }
   header {
     padding: 16px;
+    position: relative;
+    z-index: 999;
+  }
+  .topnote {
+    display: none;
   }
   .nav {
     flex-wrap: wrap;
@@ -573,23 +587,42 @@ footer {
     min-width: 0;
   }
   .brand-name {
-    font-size: 1.25rem;
+    font-size: 1rem;
+  }
+  .brand-tag {
+    font-size: 0.5rem;
   }
   .logo {
     width: 48px;
     height: 48px;
   }
   nav {
+    background: rgba(251, 247, 240, 0.9);
     display: none;
     width: 100%;
     order: 3;
+    gap: 0;
     flex-direction: column;
     align-items: flex-start;
     padding: 12px 0;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    padding: 20px 20px 50px;
   }
+  
   .nav.open nav {
     display: flex;
   }
+  nav a {
+    border-bottom: 1px solid var(--site-primary);
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 15px 0;
+    width: 100%;
+  }
+
   .menu-toggle {
     display: block;
   }

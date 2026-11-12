@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Coffee & Crochet</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
 </head>
 
 <body>
+  <div class="floating-socials">
+    <a
+      href="https://www.youtube.com/@CoffeeAndCrochetVN"
+      class="social-btn youtube"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="YouTube"
+    >
+      <i class="fa-brands fa-youtube"></i>
+      <span>YouTube</span>
+    </a>
+
+    <a
+      href="https://www.tiktok.com/@coffeeandcrochetvn"
+      class="social-btn tiktok"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="TikTok"
+    >
+      <i class="fa-brands fa-tiktok"></i>
+      <span>TikTok</span>
+    </a>
+
+    <a
+      href="https://www.facebook.com/CoffeeandCrochetVN"
+      class="social-btn facebook"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook"
+    >
+      <i class="fa-brands fa-facebook-f"></i>
+      <span>Facebook</span>
+    </a>
+  </div>
   <div id="site-root">
     <div class="topnote" data-en="A little more handmade, a little more heart ♡"
       data-vi="Thêm một chút thủ công, thêm thật nhiều yêu thương ♡">A little more handmade, a little more heart ♡</div>
@@ -22,23 +61,22 @@
           </span>
         </a>
         <nav aria-label="Main navigation">
-          <a href="#tutorials" data-en="Tutorials" data-vi="Hướng dẫn">Tutorials</a>
-          <a href="#patterns" data-en="Free Patterns" data-vi="Mẫu miễn phí">Free Patterns</a>
-          <a href="#about" data-en="Our Story" data-vi="Câu chuyện">Our Story</a>
-          <a href="#shop" data-en="Shop" data-vi="Cửa hàng">Shop</a>
+          <a href="#intro" onclick="scrollToSection(event, 'intro')" data-en="About" data-vi="Giới thiệu">Giới thiệu</a>
+          <a href="#shop" onclick="scrollToSection(event, 'shop')" data-en="Shop" data-vi="Cửa hàng">Shop</a>          
+          <a href="#about" onclick="scrollToSection(event, 'about')" data-en="Our Story" data-vi="Câu chuyện">Our Story</a>
+          <a href="#tutorials" onclick="scrollToSection(event, 'tutorials')" data-en="Free Patterns" data-vi="Mẫu miễn phí">Free Patterns</a>
+          <a href="#order" onclick="scrollToSection(event, 'order')" data-en="How-To-Order" data-vi="Đặt hàng">Đặt Hàng</a>
         </nav>
         <div class="navright"><button class="lang" id="languageBtn" type="button" aria-label="Switch language">VI /
             EN</button><button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu">☰</button></div>
       </div>
     </header>
     <div class="brand-banner" aria-label="Coffee & Crochet brand banner">
-      <img class="pc" src="./img/banner2.png"
-        alt="Coffee & Crochet banner with coffee, yarn, daisies and the slogan Good Coffee, Cozy Stitches, Happy Days">
-        <img class="sp" src="./img/banner2_sp.png"
+      <img src="./img/banner.png"
         alt="Coffee & Crochet banner with coffee, yarn, daisies and the slogan Good Coffee, Cozy Stitches, Happy Days">
     </div>
     <main>
-      <section class="hero" id="home">
+      <section class="hero" id="intro">
         <div class="hero-copy">
           <div class="eyebrow" data-en="A cozy corner for makers" data-vi="Góc nhỏ dành cho người yêu thủ công">A cozy
             corner for makers</div>
@@ -60,6 +98,188 @@
                 hand.</strong><br><span data-en="Small projects, happy moments."
                 data-vi="Món đồ nhỏ, niềm vui lớn.">Small projects, happy moments.</span></div><span
               aria-hidden="true">🌼 🧶</span>
+          </div>
+        </div>
+      </section>
+      <section class="section shop" id="shop">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow" data-en="Little things, lovingly made" data-vi="Món nhỏ, làm bằng yêu thương">Little
+                things, lovingly made</div>
+              <h2 data-en="The handmade corner" data-vi="Góc đồ handmade">The handmade corner</h2>
+            </div>
+            <p data-en="Explore our collection of handmade creations and lovely crochet designs at Coffee & Crochet. Each piece is thoughtfully crafted with care, bringing a little warmth and love to every stitch."
+              data-vi="Khám phá bộ sưu tập sản phẩm handmade và những mẫu móc len xinh xắn từ Coffee & Crochet. Mỗi sản phẩm đều được chăm chút tỉ mỉ, gửi gắm một chút yêu thương trong từng mũi móc.">
+              Khám phá bộ sưu tập sản phẩm handmade và những mẫu móc len xinh xắn từ Coffee & Crochet. Mỗi sản phẩm đều
+              được chăm chút tỉ mỉ, gửi gắm một chút yêu thương trong từng mũi móc.
+            </p>
+          </div>
+          <div class="slider-tools">
+            <div class="slider-tabs" role="group" aria-label="Lọc sản phẩm">
+              <button class="slider-tab active" data-filter="all" data-target="shopTrack" data-en="All products"
+                data-vi="Tất cả sản phẩm">Tất cả sản phẩm</button>
+
+              <button class="slider-tab" data-filter="capes" data-target="shopTrack" data-en="Capes"
+                data-vi="Áo Choàng">Áo Choàng</button>
+
+              <button class="slider-tab" data-filter="hats" data-target="shopTrack" data-en="Hats"
+                data-vi="Nón">Nón</button>
+
+              <button class="slider-tab" data-filter="headbands" data-target="shopTrack" data-en="Headbands"
+                data-vi="Băng Đô">Băng Đô</button>
+
+              <button class="slider-tab" data-filter="scarves" data-target="shopTrack" data-en="Scarves"
+                data-vi="Khăn Choàng">Khăn Choàng</button>
+
+              <button class="slider-tab" data-filter="shoes" data-target="shopTrack" data-en="Shoes"
+                data-vi="Giày">Giày</button>
+
+              <button class="slider-tab" data-filter="bags" data-target="shopTrack" data-en="Bags"
+                data-vi="Túi">Túi</button>
+            </div>
+            <div class="slide-controls"><button class="slide-btn" data-scroll="shopTrack" data-dir="-1"
+                aria-label="Cuộn sang trái">‹</button><button class="slide-btn" data-scroll="shopTrack" data-dir="1"
+                aria-label="Cuộn sang phải">›</button></div>
+          </div>
+          <div class="slider-track" id="shopTrack">
+            <article class="product" data-category="capes" data-gallery="./img/aochoang1.jpg">
+              <button class="product-gallery-trigger" type="button">
+                <span class="img"><img src="./img/aochoang1.jpg" alt=""></span>
+                <span class="gallery-hint" data-en="View ↗" data-vi="Xem ảnh sản phẩm  ↗">Xem ảnh sản phẩm ↗</span>
+              </button>
+              <h3 data-en="Material" data-vi="Chất liệu">Chất liệu</h3>
+              <div data-en="Soft and smooth Milk Cotton yarn, gentle and safe for your baby's delicate skin."
+                data-vi="Len milk cotton mềm, mịn an toàn cho làn da của bé.">Len milk cotton mềm, mịn an toàn cho làn
+                da của bé.</div>
+              <!-- THÊM ẢNH BỔ SUNG Ở ĐÂY -->
+              <img class="product-gallery-source" src="./img/aochoang2.jpg" alt="">
+              <img class="product-gallery-source" src="./img/aochoang3.jpg" alt="">
+              <img class="product-gallery-source" src="./img/aochoang4.jpg" alt="">
+            </article>
+            <article class="product" data-category="hats" data-gallery="./img/non1.jpg">
+              <button class="product-gallery-trigger" type="button">
+                <span class="img"><img src="./img/non1.jpg" alt=""></span>
+                <span class="gallery-hint" data-en="View ↗" data-vi="Xem ảnh sản phẩm  ↗">Xem ảnh sản phẩm ↗</span>
+              </button>
+              <h3 data-en="Material" data-vi="Chất liệu">Chất liệu</h3>
+              <div data-en="Soft and smooth Milk Cotton yarn, gentle and safe for your baby's delicate skin."
+                data-vi="Len milk cotton mềm, mịn an toàn cho làn da của bé.">Len milk cotton mềm, mịn an toàn cho làn
+                da của bé.</div>
+              <!-- THÊM ẢNH BỔ SUNG Ở ĐÂY -->
+              <img class="product-gallery-source" src="./img/non1-2.jpg" alt="">
+              <img class="product-gallery-source" src="./img/non1-3.jpg" alt="">
+            </article>
+            <article class="product" data-category="hats" data-gallery="./img/non2.jpg">
+              <button class="product-gallery-trigger" type="button">
+                <span class="img"><img src="./img/non2.jpg" alt=""></span>
+                <span class="gallery-hint" data-en="View ↗" data-vi="Xem ảnh sản phẩm  ↗">Xem ảnh sản phẩm ↗</span>
+              </button>
+              <h3 data-en="Material" data-vi="Chất liệu">Chất liệu</h3>
+              <div data-en="Soft and smooth Milk Cotton yarn, gentle and safe for your baby's delicate skin."
+                data-vi="Len milk cotton mềm, mịn an toàn cho làn da của bé.">Len milk cotton mềm, mịn an toàn cho làn
+                da của bé.</div>
+              <!-- THÊM ẢNH BỔ SUNG Ở ĐÂY -->
+              <img class="product-gallery-source" src="./img/non2-2.jpg" alt="">
+              <img class="product-gallery-source" src="./img/non2-3.jpg" alt="">
+            </article>
+            <article class="product" data-category="hats" data-gallery="./img/non3.jpg">
+              <button class="product-gallery-trigger" type="button">
+                <span class="img"><img src="./img/non3.jpg" alt=""></span>
+                <span class="gallery-hint" data-en="View ↗" data-vi="Xem ảnh sản phẩm  ↗">Xem ảnh sản phẩm ↗</span>
+              </button>
+              <h3 data-en="Material" data-vi="Chất liệu">Chất liệu</h3>
+              <div data-en="Soft and smooth Milk Cotton yarn, gentle and safe for your baby's delicate skin."
+                data-vi="Len milk cotton mềm, mịn an toàn cho làn da của bé.">Len milk cotton mềm, mịn an toàn cho làn
+                da của bé.</div>
+              <!-- THÊM ẢNH BỔ SUNG Ở ĐÂY -->
+              <img class="product-gallery-source" src="./img/non3-2.jpg" alt="">
+              <img class="product-gallery-source" src="./img/non3-3.jpg" alt="">
+            </article>
+            <article class="product" data-category="headbands" data-gallery="./img/bangdo1.jpg">
+              <button class="product-gallery-trigger" type="button">
+                <span class="img"><img src="./img/bangdo1.jpg" alt=""></span>
+                <span class="gallery-hint" data-en="View ↗" data-vi="Xem ảnh sản phẩm  ↗">Xem ảnh sản phẩm ↗</span>
+              </button>
+              <h3 data-en="Material" data-vi="Chất liệu">Chất liệu</h3>
+              <div data-en="Soft and smooth Milk Cotton yarn, gentle and safe for your baby's delicate skin."
+                data-vi="Len milk cotton mềm, mịn an toàn cho làn da của bé.">Len milk cotton mềm, mịn an toàn cho làn
+                da của bé.</div>
+              <!-- THÊM ẢNH BỔ SUNG Ở ĐÂY -->
+              <img class="product-gallery-source" src="./img/bangdo1_2.jpg" alt="">
+              <img class="product-gallery-source" src="./img/bangdo1_3.jpg" alt="">
+            </article>
+            <article class="product" data-category="headbands" data-gallery="./img/bangdo2.jpg">
+              <button class="product-gallery-trigger" type="button">
+                <span class="img"><img src="./img/bangdo2.jpg" alt=""></span>
+                <span class="gallery-hint" data-en="View ↗" data-vi="Xem ảnh sản phẩm  ↗">Xem ảnh sản phẩm ↗</span>
+              </button>
+              <h3 data-en="Material" data-vi="Chất liệu">Chất liệu</h3>
+              <div data-en="Soft and smooth Milk Cotton yarn, gentle and safe for your baby's delicate skin."
+                data-vi="Len milk cotton mềm, mịn an toàn cho làn da của bé.">Len milk cotton mềm, mịn an toàn cho làn
+                da của bé.</div>
+              <!-- THÊM ẢNH BỔ SUNG Ở ĐÂY -->
+              <img class="product-gallery-source" src="./img/bangdo2_2.jpg" alt="">
+            </article>
+            <article class="product" data-category="scarves" data-gallery="./img/khanchoang1.jpg">
+              <button class="product-gallery-trigger" type="button">
+                <span class="img"><img src="./img/khanchoang1.jpg" alt=""></span>
+                <span class="gallery-hint" data-en="View ↗" data-vi="Xem ảnh sản phẩm  ↗">Xem ảnh sản phẩm ↗</span>
+              </button>
+              <h3 data-en="Material" data-vi="Chất liệu">Chất liệu</h3>
+              <div data-en="Soft and smooth Milk Cotton yarn, gentle and safe for your baby's delicate skin."
+                data-vi="Len cotton VN mềm, nhẹ.">Len cotton VN mềm, nhẹ.</div>
+              <!-- THÊM ẢNH BỔ SUNG Ở ĐÂY -->
+              <!-- <img class="product-gallery-source" src="./img/bangdo2_2.jpg" alt=""> -->
+            </article>
+            <article class="product" data-category="shoes" data-gallery="./img/non3.jpg">
+              <button class="product-gallery-trigger" type="button">
+                <span class="img"><img src="./img/non3.jpg" alt=""></span>
+                <span class="gallery-hint" data-en="View ↗" data-vi="Xem ảnh sản phẩm  ↗">Xem ảnh sản phẩm ↗</span>
+              </button>
+              <h3 data-en="Material" data-vi="Chất liệu">Chất liệu</h3>
+              <div data-en="Soft and smooth Milk Cotton yarn, gentle and safe for your baby's delicate skin."
+                data-vi="Len milk cotton mềm, mịn an toàn cho làn da của bé.">Len milk cotton mềm, mịn an toàn cho làn
+                da của bé.</div>
+              <!-- THÊM ẢNH BỔ SUNG Ở ĐÂY -->
+              <img class="product-gallery-source" src="./img/non3-2.jpg" alt="">
+              <img class="product-gallery-source" src="./img/non3-3.jpg" alt="">
+            </article>
+            <article class="product" data-category="bags" data-gallery="./img/bag1.jpg">
+              <button class="product-gallery-trigger" type="button">
+                <span class="img"><img src="./img/bag1.jpg" alt=""></span>
+                <span class="gallery-hint" data-en="View ↗" data-vi="Xem ảnh sản phẩm  ↗">Xem ảnh sản phẩm ↗</span>
+              </button>
+              <h3 data-en="Material" data-vi="Chất liệu">Chất liệu</h3>
+              <div
+                data-en="Regular yarn or 2mm woven yarn, both suitable for creating beautifully shaped crochet projects."
+                data-vi="Len thường, hoặc Sợi Dệt 2mm lên form đẹp.">Len thường, hoặc Sợi Dệt 2mm lên form đẹp.</div>
+              <!-- THÊM ẢNH BỔ SUNG Ở ĐÂY -->
+              <img class="product-gallery-source" src="./img/bag1.jpg" alt="">
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section about-band" id="about">
+        <div class="section-inner about-grid">
+          <div class="about-img"><img src="./img/CoffeeandCrochet.png" alt="A quiet creative workspace" loading="lazy"
+              onerror="this.style.display='none'"></div>
+          <div class="about-copy">
+            <div class="eyebrow" data-en="A little about us" data-vi="Đôi lời về chúng mình">A little about us</div>
+            <h2 data-en="Made slowly, with a whole lot of heart."
+              data-vi="Làm bằng sự chậm rãi, gửi vào đó thật nhiều yêu thương.">Made slowly, with a whole lot of heart.
+            </h2>
+            <p data-en="Coffee & Crochet celebrates the simple joy of making things by hand. Here you’ll find approachable crochet lessons, cozy home projects, sweet little flowers, and vintage-inspired ideas to keep your hands busy and your heart happy."
+              data-vi="Coffee & Crochet trân trọng niềm vui giản dị khi tự tay làm nên một món đồ. Bạn sẽ tìm thấy bài học móc len dễ hiểu, đồ trang trí nhà cửa, những bông hoa nhỏ và ý tưởng vintage để đôi tay luôn bận rộn, còn trái tim thì vui vẻ.">
+              Coffee & Crochet celebrates the simple joy of making things by hand. Here you’ll find approachable crochet
+              lessons, cozy home projects, sweet little flowers, and vintage-inspired ideas to keep your hands busy and
+              your heart happy.</p>
+            <p data-en="Whether you’re holding a crochet hook for the first time or returning to a beloved hobby, there’s a place for you here."
+              data-vi="Dù đây là lần đầu bạn cầm kim móc hay bạn đang quay lại với sở thích thân quen, luôn có một chỗ dành cho bạn ở đây.">
+              Whether you’re holding a crochet hook for the first time or returning to a beloved hobby, there’s a place
+              for you here.</p>
+            <div class="values"><span class="value">♡ Handmade with love</span><span class="value">☕ Cozy
+                moments</span><span class="value">🌼 Vintage charm</span></div>
           </div>
         </div>
       </section>
@@ -102,9 +322,7 @@
               </div>
             </article>
             <article class="card" data-category="home">
-              <div class="card-img"><img
-                  src="./img/img_07.jpg"
-                  alt="Coffee in a cozy setting" loading="lazy"></div>
+              <div class="card-img"><img src="./img/img_07.jpg" alt="Coffee in a cozy setting" loading="lazy"></div>
               <div class="card-body"><span class="tag" data-en="Easy · Home decor" data-vi="Dễ móc · Trang trí nhà">Easy
                   · Home decor</span>
                 <h3 data-en="Coffee-time coaster" data-vi="Lót ly cho giờ cà phê">Coffee-time coaster</h3>
@@ -116,9 +334,7 @@
               </div>
             </article>
             <article class="card" data-category="vintage">
-              <div class="card-img"><img
-                  src="./img/img_03.jpg"
-                  alt="Yarn and crochet project" loading="lazy"></div>
+              <div class="card-img"><img src="./img/img_03.jpg" alt="Yarn and crochet project" loading="lazy"></div>
               <div class="card-body"><span class="tag" data-en="Vintage-inspired"
                   data-vi="Cảm hứng vintage">Vintage-inspired</span>
                 <h3 data-en="A timeless lace shawl" data-vi="Khăn choàng ren cổ điển">A timeless lace shawl</h3>
@@ -128,83 +344,6 @@
                   href="#contact" class="text-link" data-en="Tutorial coming soon →"
                   data-vi="Hướng dẫn sắp ra mắt →">Tutorial coming soon →</a>
               </div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="section about-band" id="about">
-        <div class="section-inner about-grid">
-          <div class="about-img"><img
-              src="./img/img_06.jpg"
-              alt="A quiet creative workspace" loading="lazy" onerror="this.style.display='none'"></div>
-          <div class="about-copy">
-            <div class="eyebrow" data-en="A little about us" data-vi="Đôi lời về chúng mình">A little about us</div>
-            <h2 data-en="Made slowly, with a whole lot of heart."
-              data-vi="Làm bằng sự chậm rãi, gửi vào đó thật nhiều yêu thương.">Made slowly, with a whole lot of heart.
-            </h2>
-            <p data-en="Coffee & Crochet celebrates the simple joy of making things by hand. Here you’ll find approachable crochet lessons, cozy home projects, sweet little flowers, and vintage-inspired ideas to keep your hands busy and your heart happy."
-              data-vi="Coffee & Crochet trân trọng niềm vui giản dị khi tự tay làm nên một món đồ. Bạn sẽ tìm thấy bài học móc len dễ hiểu, đồ trang trí nhà cửa, những bông hoa nhỏ và ý tưởng vintage để đôi tay luôn bận rộn, còn trái tim thì vui vẻ.">
-              Coffee & Crochet celebrates the simple joy of making things by hand. Here you’ll find approachable crochet
-              lessons, cozy home projects, sweet little flowers, and vintage-inspired ideas to keep your hands busy and
-              your heart happy.</p>
-            <p data-en="Whether you’re holding a crochet hook for the first time or returning to a beloved hobby, there’s a place for you here."
-              data-vi="Dù đây là lần đầu bạn cầm kim móc hay bạn đang quay lại với sở thích thân quen, luôn có một chỗ dành cho bạn ở đây.">
-              Whether you’re holding a crochet hook for the first time or returning to a beloved hobby, there’s a place
-              for you here.</p>
-            <div class="values"><span class="value">♡ Handmade with love</span><span class="value">☕ Cozy
-                moments</span><span class="value">🌼 Vintage charm</span></div>
-          </div>
-        </div>
-      </section>
-      <section class="section shop" id="shop">
-        <div class="section-inner">
-          <div class="section-head">
-            <div>
-              <div class="eyebrow" data-en="Little things, lovingly made" data-vi="Món nhỏ, làm bằng yêu thương">Little
-                things, lovingly made</div>
-              <h2 data-en="The handmade corner" data-vi="Góc đồ handmade">The handmade corner</h2>
-            </div>
-            <p data-en="A little collection of patterns and handmade treasures is in the works. For now, explore the ideas and stay tuned."
-              data-vi="Một bộ sưu tập mẫu móc và sản phẩm handmade đang được chuẩn bị. Trong lúc chờ đợi, hãy khám phá ý tưởng và ghé lại nhé.">
-              A little collection of patterns and handmade treasures is in the works. For now, explore the ideas and
-              stay tuned.</p>
-          </div>
-          <div class="slider-tools">
-            <div class="slider-tabs" role="group" aria-label="Lọc sản phẩm"><button class="slider-tab active"
-                data-filter="all" data-target="shopTrack" data-en="All products" data-vi="Tất cả sản phẩm">Tất cả sản
-                phẩm</button><button class="slider-tab" data-filter="pdf" data-target="shopTrack" data-en="PDF patterns"
-                data-vi="Mẫu PDF">Mẫu PDF</button><button class="slider-tab" data-filter="handmade"
-                data-target="shopTrack" data-en="Handmade" data-vi="Đồ handmade">Đồ handmade</button><button
-                class="slider-tab" data-filter="kit" data-target="shopTrack" data-en="DIY kits" data-vi="Bộ kit">Bộ
-                kit</button></div>
-            <div class="slide-controls"><button class="slide-btn" data-scroll="shopTrack" data-dir="-1"
-                aria-label="Cuộn sang trái">‹</button><button class="slide-btn" data-scroll="shopTrack" data-dir="1"
-                aria-label="Cuộn sang phải">›</button></div>
-          </div>
-          <div class="slider-track" id="shopTrack">
-            <article class="product" data-category="pdf">
-              <div class="symbol">🌼</div><span class="soon" data-en="Coming soon" data-vi="Sắp ra mắt">Coming
-                soon</span>
-              <h3 data-en="Printable crochet patterns" data-vi="Mẫu móc PDF">Printable crochet patterns</h3>
-              <p data-en="Clear, tested patterns with stitch counts and helpful photos."
-                data-vi="Mẫu móc rõ ràng, đã kiểm tra, có số mũi và ảnh hướng dẫn.">Clear, tested patterns with stitch
-                counts and helpful photos.</p>
-            </article>
-            <article class="product" data-category="handmade">
-              <div class="symbol">🧶</div><span class="soon" data-en="Made by hand" data-vi="Làm thủ công">Made by
-                hand</span>
-              <h3 data-en="Little handmade gifts" data-vi="Quà handmade xinh xắn">Little handmade gifts</h3>
-              <p data-en="Flowers, coasters, charms, and small gifts made with care."
-                data-vi="Hoa len, lót ly, móc khóa và món quà nhỏ được làm tỉ mỉ.">Flowers, coasters, charms, and small
-                gifts made with care.</p>
-            </article>
-            <article class="product" data-category="kit">
-              <div class="symbol">🎁</div><span class="soon" data-en="In the future" data-vi="Trong tương lai">In the
-                future</span>
-              <h3 data-en="DIY crochet kits" data-vi="Bộ kit tự móc len">DIY crochet kits</h3>
-              <p data-en="A thoughtful bundle of yarn, tools, and instructions for your next cozy project."
-                data-vi="Bộ len, dụng cụ và hướng dẫn để bạn bắt đầu dự án ấm áp tiếp theo.">A thoughtful bundle of
-                yarn, tools, and instructions for your next cozy project.</p>
             </article>
           </div>
         </div>
@@ -219,17 +358,90 @@
             data-vi="Theo dõi chúng mình để cập nhật hướng dẫn mới, thông báo mẫu miễn phí và những khoảnh khắc trong quá trình làm đồ.">
             Follow along for new tutorials, free pattern announcements, and little moments from the making process.</p>
           <div class="actions" style="justify-content:center">
-            <a class="btn" href="https://www.youtube.com/@CoffeeAndCrochetVN"
-              target="_blank" rel="noopener" data-en="Visit YouTube ↗" data-vi="Xem YouTube ↗">Visit YouTube ↗</a>
-              <a
-              class="btn secondary" href="https://www.facebook.com/CoffeeandCrochetVN" target="_blank" rel="noopener"
+            <a class="btn" href="https://www.youtube.com/@CoffeeAndCrochetVN" target="_blank" rel="noopener"
+              data-en="Visit YouTube ↗" data-vi="Xem YouTube ↗">Visit YouTube ↗</a>
+            <a class="btn secondary" href="https://www.facebook.com/CoffeeandCrochetVN" target="_blank" rel="noopener"
               data-en="Find us on Facebook ↗" data-vi="Tìm chúng mình trên Facebook ↗">Find us on Facebook ↗</a>
 
-              <a class="btn secondary" href="https://tranhuyen87.github.io/CoffeeandCrochet/"
-              target="_blank" rel="noopener" data-en="Visit Website ↗" data-vi="Xem Website ↗">Visit Website ↗</a>
-            </div>
+            <a class="btn secondary" href="https://tranhuyen87.github.io/CoffeeandCrochet/" target="_blank"
+              rel="noopener" data-en="Visit Website ↗" data-vi="Xem Website ↗">Visit Website ↗</a>
+          </div>
         </div>
       </section>
+
+      <section class="section order-section" id="order">
+        <div class="section-inner">
+          <div class="section-head order-heading">            <div>
+              <span class="eyebrow" data-en="SIMPLE & EASY" data-vi="ĐƠN GIẢN & DỄ DÀNG">ĐƠN GIẢN & DỄ DÀNG</span>
+              <h2 data-en="How to Order" data-vi="Cách đặt hàng">Cách đặt hàng</h2>
+              <p data-en="Choose your favorite crochet item and follow these simple steps to place an order."
+                data-vi="Chọn sản phẩm móc len bạn yêu thích và thực hiện theo các bước đơn giản dưới đây.">
+                Chọn sản phẩm móc len bạn yêu thích và thực hiện theo các bước đơn giản dưới đây.
+              </p>
+            </div>
+          </div>
+
+          <div class="order-grid">
+
+            <div class="order-step">
+              <div class="order-number number-yellow">1</div>
+              <div class="order-content">
+                <h3 data-en="Choose Your Item" data-vi="Chọn sản phẩm">Chọn sản phẩm</h3>
+                <p data-en="Browse our Products section or send us a photo of the crochet design you like."
+                  data-vi="Chọn sản phẩm trong mục Sản phẩm hoặc gửi cho chúng mình hình ảnh mẫu bạn yêu thích.">
+                  Chọn sản phẩm trong mục Sản phẩm hoặc gửi cho chúng mình hình ảnh mẫu bạn yêu thích.
+                </p>
+              </div>
+            </div>
+
+            <div class="order-step">
+              <div class="order-number number-pink">2</div>
+              <div class="order-content">
+                <h3 data-en="Contact Us" data-vi="Liên hệ với chúng mình">Liên hệ với chúng mình</h3>
+                <p data-en="Let us know your preferred colors, size, and desired delivery date via Facebook or Zalo."
+                  data-vi="Cho chúng mình biết màu sắc, kích thước và thời gian bạn mong muốn nhận hàng qua Facebook hoặc Zalo.">
+                  Cho chúng mình biết màu sắc, kích thước và thời gian bạn mong muốn nhận hàng qua Facebook hoặc Zalo.
+                </p>
+              </div>
+            </div>
+
+            <div class="order-step">
+              <div class="order-number number-sage">3</div>
+              <div class="order-content">
+                <h3 data-en="Confirm Your Order" data-vi="Xác nhận đơn hàng">Xác nhận đơn hàng</h3>
+                <p data-en="For custom-made items, a 50% deposit is required. Ready-made items can be paid for upon delivery."
+                  data-vi="Với sản phẩm đặt móc theo yêu cầu, bạn đặt cọc 50%. Sản phẩm có sẵn sẽ thanh toán khi nhận hàng.">
+                  Với sản phẩm đặt móc theo yêu cầu, bạn đặt cọc 50%. Sản phẩm có sẵn sẽ thanh toán khi nhận hàng.
+                </p>
+              </div>
+            </div>
+
+            <div class="order-step">
+              <div class="order-number number-blue">4</div>
+              <div class="order-content">
+                <h3 data-en="Receive Your Package" data-vi="Nhận sản phẩm">Nhận sản phẩm</h3>
+                <p data-en="We'll send you photos of your finished item before carefully packing and shipping it to you."
+                  data-vi="Chúng mình sẽ gửi hình ảnh sản phẩm hoàn thiện để bạn xem trước, sau đó đóng gói cẩn thận và gửi đến bạn.">
+                  Chúng mình sẽ gửi hình ảnh sản phẩm hoàn thiện để bạn xem trước, sau đó đóng gói cẩn thận và gửi đến
+                  bạn.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="order-note">
+            <span class="order-heart">♡</span>
+            <p data-en="Every handmade piece is made with care and a little love. Thank you for supporting our small crochet studio!"
+              data-vi="Mỗi sản phẩm handmade đều được làm bằng sự tỉ mỉ và một chút yêu thương. Cảm ơn bạn đã ủng hộ Coffee & Crochet!">
+              Mỗi sản phẩm handmade đều được làm bằng sự tỉ mỉ và một chút yêu thương. Cảm ơn bạn đã ủng hộ Coffee &
+              Crochet!
+            </p>
+          </div>
+
+        </div>
+      </section>
+
     </main>
     <footer>
       <div class="footer-inner">
@@ -238,12 +450,28 @@
           <div class="footer-copy" data-en="Good Coffee. Cozy Stitches. Happy Days."
             data-vi="Cà phê ngon. Mũi len ấm áp. Ngày vui dịu dàng.">Good Coffee. Cozy Stitches. Happy Days.</div>
         </div>
-        <div class="socials"><a href="#tutorials" data-en="Tutorials" data-vi="Hướng dẫn">Tutorials</a><a href="#about"
-            data-en="About" data-vi="Giới thiệu">About</a><a href="#contact" data-en="Contact"
-            data-vi="Liên hệ">Contact</a></div>
+        <div class="socials">
+          <a href="#tutorials" onclick="scrollToSection(event, 'tutorials')" data-en="Tutorials" data-vi="Hướng dẫn">Tutorials</a>
+          <a href="#about"  onclick="scrollToSection(event, 'about')" data-en="About" data-vi="Giới thiệu">About</a>
+          <a href="#contact"  onclick="scrollToSection(event, 'contact')" data-en="Contact" data-vi="Liên hệ">Contact</a></div>
         <div class="footer-copy">© <span id="year"></span> Coffee & Crochet</div>
       </div>
     </footer>
+  </div>
+  <!-- Product image gallery popup -->
+  <div class="gallery-modal" id="productGallery" aria-hidden="true">
+    <div class="gallery-backdrop" data-gallery-close></div>
+    <div class="gallery-dialog" role="dialog" aria-modal="true" aria-label="Thư viện hình ảnh sản phẩm">
+      <button class="gallery-close" type="button" aria-label="Đóng" data-gallery-close>×</button>
+      <button class="gallery-arrow gallery-prev" type="button" aria-label="Ảnh trước">‹</button>
+      <figure class="gallery-main">
+        <img id="galleryMainImage" src="" alt="">
+        <figcaption id="galleryCaption"></figcaption>
+      </figure>
+      <button class="gallery-arrow gallery-next" type="button" aria-label="Ảnh tiếp theo">›</button>
+      <div class="gallery-thumbnails" id="galleryThumbnails" aria-label="Chọn ảnh"></div>
+      <div class="gallery-count" id="galleryCount"></div>
+    </div>
   </div>
   <div id="toast" role="status"></div>
   <script>
@@ -262,8 +490,120 @@
       document.querySelectorAll('[data-scroll]').forEach(btn => btn.addEventListener('click', () => { const track = document.getElementById(btn.dataset.scroll); if (track) track.scrollBy({ left: track.clientWidth * 0.85 * Number(btn.dataset.dir), behavior: 'smooth' }) }));
       document.querySelectorAll('.slider-tab').forEach(btn => btn.addEventListener('click', () => { const targetId = btn.dataset.target || 'tutorialTrack'; const group = btn.closest('.slider-tools'); group.querySelectorAll('.slider-tab').forEach(b => b.classList.remove('active')); btn.classList.add('active'); const track = document.getElementById(targetId); if (!track) return; track.querySelectorAll('[data-category]').forEach(card => { card.style.display = (btn.dataset.filter === 'all' || card.dataset.category === btn.dataset.filter) ? '' : 'none' }); track.scrollTo({ left: 0, behavior: 'smooth' }) }));
       document.querySelectorAll('a[href="#contact"]').forEach(a => { if (a.textContent.toLowerCase().includes('coming soon') || a.textContent.toLowerCase().includes('sắp ra mắt')) a.addEventListener('click', e => { e.preventDefault(); document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); showToast(lang === 'en' ? 'This tutorial is planned for a future update.' : 'Hướng dẫn này sẽ được bổ sung trong thời gian tới.'); }) });
+
+      // Product gallery: add image paths to each product's data-gallery attribute.
+      const gallery = document.getElementById('productGallery');
+      const mainImage = document.getElementById('galleryMainImage');
+      const caption = document.getElementById('galleryCaption');
+      const thumbs = document.getElementById('galleryThumbnails');
+      const count = document.getElementById('galleryCount');
+      let galleryImages = [];
+      let galleryIndex = 0;
+      let lastGalleryTrigger = null;
+
+      function showGalleryImage(index) {
+        if (!galleryImages.length) return;
+        galleryIndex = (index + galleryImages.length) % galleryImages.length;
+        const item = galleryImages[galleryIndex];
+        mainImage.src = item.src;
+        mainImage.alt = item.alt || 'Ảnh sản phẩm Coffee & Crochet';
+        caption.textContent = item.alt || '';
+        count.textContent = (galleryIndex + 1) + ' / ' + galleryImages.length;
+        thumbs.querySelectorAll('button').forEach((button, i) => {
+          button.classList.toggle('active', i === galleryIndex);
+          button.setAttribute('aria-current', i === galleryIndex ? 'true' : 'false');
+        });
+      }
+
+      function openGallery(product, trigger) {
+        // Collect images from data-gallery AND all image elements inside this product card.
+        const title = product.querySelector('h3')?.textContent.trim() || 'Sản phẩm Coffee & Crochet';
+        const listedPaths = (product.dataset.gallery || '')
+          .split(',')
+          .map(path => path.trim())
+          .filter(Boolean);
+
+        const cardImages = Array.from(product.querySelectorAll('img'))
+          .map(img => ({
+            src: img.currentSrc || img.src || img.getAttribute('src'),
+            alt: img.alt || ''
+          }))
+          .filter(item => item.src);
+
+        const allImages = [...listedPaths.map(src => ({ src, alt: '' })), ...cardImages];
+        const seen = new Set();
+        galleryImages = allImages
+          .map(item => {
+            let resolvedSrc = item.src;
+            try { resolvedSrc = new URL(item.src, document.baseURI).href; } catch (_) { }
+            return { src: resolvedSrc, alt: item.alt };
+          })
+          .filter(item => {
+            if (seen.has(item.src)) return false;
+            seen.add(item.src);
+            return true;
+          })
+          .map((item, i) => ({
+            src: item.src,
+            alt: item.alt || title + ' - ảnh ' + (i + 1)
+          }));
+
+        if (!galleryImages.length) return;
+        lastGalleryTrigger = trigger;
+        thumbs.innerHTML = '';
+        galleryImages.forEach((item, i) => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'gallery-thumb';
+          button.setAttribute('aria-label', 'Xem ảnh ' + (i + 1));
+          const image = document.createElement('img');
+          image.src = item.src;
+          image.alt = '';
+          button.appendChild(image);
+          button.addEventListener('click', () => showGalleryImage(i));
+          thumbs.appendChild(button);
+        });
+        showGalleryImage(0);
+        gallery.classList.add('is-open');
+        gallery.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('gallery-open');
+        gallery.querySelector('.gallery-close').focus();
+      }
+
+      function closeGallery() {
+        gallery.classList.remove('is-open');
+        gallery.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('gallery-open');
+        if (lastGalleryTrigger) lastGalleryTrigger.focus();
+      }
+
+      document.querySelectorAll('.product .product-gallery-trigger').forEach(trigger => {
+        trigger.addEventListener('click', () => openGallery(trigger.closest('.product'), trigger));
+      });
+      gallery.querySelectorAll('[data-gallery-close]').forEach(button => button.addEventListener('click', closeGallery));
+      gallery.querySelector('.gallery-prev').addEventListener('click', () => showGalleryImage(galleryIndex - 1));
+      gallery.querySelector('.gallery-next').addEventListener('click', () => showGalleryImage(galleryIndex + 1));
+      document.addEventListener('keydown', event => {
+        if (!gallery.classList.contains('is-open')) return;
+        if (event.key === 'Escape') closeGallery();
+        if (event.key === 'ArrowLeft') showGalleryImage(galleryIndex - 1);
+        if (event.key === 'ArrowRight') showGalleryImage(galleryIndex + 1);
+      });
     })();
   </script>
-</body>
+  <script>
+  function scrollToSection(event, sectionId) {
+    event.preventDefault();
 
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
+</script>
+</body>
 </html>

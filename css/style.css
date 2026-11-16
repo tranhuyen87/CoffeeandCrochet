@@ -1116,3 +1116,57 @@ body.gallery-open {
     transform: none;
   }
 }
+
+/* Page Top Button */
+.page-top {
+  position: fixed;
+  right: 20px;
+  bottom: 25px;
+  z-index: 9998;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+  background: #8b6b4a;
+  color: #fff;
+
+  font-size: 20px;
+  cursor: pointer;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease,
+              background 0.3s ease,
+              transform 0.3s ease;
+}
+
+.page-top.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.page-top:hover {
+  background: #654b32;
+  transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+  .page-top {
+    right: 10px;
+    bottom: 20px;
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+}

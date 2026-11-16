@@ -400,9 +400,9 @@
               <div class="order-number number-pink">2</div>
               <div class="order-content">
                 <h3 data-en="Contact Us" data-vi="Liên hệ với chúng mình">Liên hệ với chúng mình</h3>
-                <p data-en="Let us know your preferred colors, size, and desired delivery date via Facebook or Zalo."
-                  data-vi="Cho chúng mình biết màu sắc, kích thước và thời gian bạn mong muốn nhận hàng qua Facebook hoặc Zalo.">
-                  Cho chúng mình biết màu sắc, kích thước và thời gian bạn mong muốn nhận hàng qua Facebook hoặc Zalo.
+                <p data-en="Let us know your preferred colors, size, and desired delivery date via Facebook."
+                  data-vi="Cho chúng mình biết màu sắc, kích thước và thời gian bạn mong muốn nhận hàng qua Facebook.">
+                  Cho chúng mình biết màu sắc, kích thước và thời gian bạn mong muốn nhận hàng qua <a href="https://www.facebook.com/CoffeeandCrochetVN" target="_blank">Facebook</a>
                 </p>
               </div>
             </div>
@@ -443,9 +443,11 @@
 
         </div>
       </section>
-
     </main>
     <footer>
+      <button id="pageTopBtn" class="page-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
       <div class="footer-inner">
         <div>
           <div class="footer-title">Coffee & Crochet ☕</div>
@@ -606,6 +608,26 @@
       });
     }
   }
+</script>
+<script>
+  const pageTopBtn = document.getElementById('pageTopBtn');
+
+  // Hiện nút khi cuộn xuống
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      pageTopBtn.classList.add('show');
+    } else {
+      pageTopBtn.classList.remove('show');
+    }
+  }, { passive: true });
+
+  // Cuộn về đầu trang
+  pageTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 </script>
 </body>
 </html>
